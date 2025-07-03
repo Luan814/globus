@@ -1,27 +1,29 @@
 
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header");
+  const scrollY = window.scrollY;
 
-
-
-let isPlaying = true;
-
-
-const esg = new Swiper('.swiper5', {
-slidesPerView: 1, 
-spaceBetween: 30,
-loop: true,
-centeredSlides: true,
-// autoplay: {
-//     delay: 3000,
-//     disableOnInteraction: false,
-// },
-pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar',
-},
-navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-},
+  if (scrollY > 100) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
 
+
+gsap.registerPlugin(ScrollTrigger);
+
+  const panels = gsap.utils.toArray(".main-swiper .panel");
+
+  panels.forEach((panel, i) => {
+    if (i !== panels.length - 1) {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+        scrub: true,
+      });
+    }
+  });
 
