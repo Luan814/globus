@@ -1,4 +1,3 @@
-
 html {
   font-size: 10px;
   --main: #436769;
@@ -460,6 +459,20 @@ header #gnb .dep1 > li:hover .dep2 {
   opacity: 1;
 }
 
+@media (max-width: 900px) {
+  .section1 {
+    align-items: center;
+    justify-content: center;
+  }
+  .section1 .highlight-content {
+    display: none;
+  }
+  .section1 .highlight-swiper {
+    width: 500px;
+    height: 500px;
+  }
+}
+
 /* ---section2---  */
 
 .section2 {
@@ -798,13 +811,13 @@ header #gnb .dep1 > li:hover .dep2 {
   align-items: center;
   position: relative;
   width: 25%;
-  border-radius: 10px;
   overflow: hidden;
 }
 
 .section4 swiper-slide img {
   width: 100%;
   height: 60%;
+  border-radius: 10px;
 }
 
 .section4 .news-box {
@@ -876,6 +889,18 @@ header #gnb .dep1 > li:hover .dep2 {
   }
   .section4 .news-box .date {
     display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .section4 button {
+    transform: translate(-50%, 150%);
+  }
+  .section4 h2 {
+    font-size: 4rem;
+  }
+  .section4 .news-swiper {
+    width: 60%;
   }
 }
 
@@ -1088,7 +1113,7 @@ header #gnb .dep1 > li:hover .dep2 {
   .section6 .career-link {padding-top: 30px;}
 }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
   .section6 .career-content h2 {font-size: 4rem;}
   .section6 .career-content p {
     line-height: 25px;
@@ -1112,6 +1137,7 @@ header #gnb .dep1 > li:hover .dep2 {
   padding: 50px 120px;
   
 }
+
 .section7 .contact-box {
   width: 100%;
   border: 1px solid #ffffff;
@@ -1121,15 +1147,18 @@ header #gnb .dep1 > li:hover .dep2 {
   align-items: center;
   justify-content: space-between;
 }
+
 .section7 .contact-content {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .section7 .contact-content h2 {
   color: #fff;
   font-size: 8rem;
 }
+
 .section7 .contact-content p {
   color: #fff;
   font-size: 2rem;
@@ -1141,6 +1170,7 @@ header #gnb .dep1 > li:hover .dep2 {
   width: 40%; 
   gap: 20px;
 }
+
 .section7 .contact-form label {
   color: #fff;
   font-size: 3rem;
@@ -1151,6 +1181,7 @@ header #gnb .dep1 > li:hover .dep2 {
   flex-direction: column;
   gap: 10px;
 }
+
 .section7 input, .section7 textarea {
   width: 100%;
   font-size: 2rem;
@@ -1173,6 +1204,7 @@ header #gnb .dep1 > li:hover .dep2 {
   width: 30%;
   height: 100%;
 }
+
 .section7 .form-buttons .btn-submit {
   background: #ffffff;
   color: var(--sub);
@@ -1181,16 +1213,43 @@ header #gnb .dep1 > li:hover .dep2 {
   height: 100%;
   font-weight: bold;
 }
+
 .section7 .form-buttons .btn-cancel:hover {
   background: rgba(255, 255, 255, 0.6);
   color: var(--sub);
   border: none;
 }
+
 .section7 .form-buttons .btn-submit:hover {
   background: var(--sub);
   color: #fff;
 }
 
+@media (max-width: 1140px) {
+  .section7 .contact-box {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 0px 40px;
+    height: 80%;
+  }
+  .section7 .contact-box h2 {
+    font-size: 4rem;
+  }
+  .section7 .contact-form {
+    width: 100%;
+  }
+  .section7 .contact-box .form-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  .section7 .form-buttons .btn-submit {
+    width: 50%;
+  }
+  .section7 .form-buttons .btn-cancel {
+    width: 50%;
+  }
+}
 
 /* ---footer--- */
 
@@ -1219,12 +1278,12 @@ header #gnb .dep1 > li:hover .dep2 {
   gap: 30px;
 }
 #footer .container .footer-links a {
-  padding: 15px 20px;
+  padding: 12px 16px;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 30px;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 #footer .container .footer-links a:hover {
@@ -1247,4 +1306,18 @@ header #gnb .dep1 > li:hover .dep2 {
 
 #footer .container .corporation p, #footer .container .corporation span {
   line-height: 25px;
+}
+
+@media (max-width: 800px) {
+  #footer {
+    height: 400px;
+  }
+  #footer .container {
+    align-items: center;
+    padding: 0 50px;
+  }
+  #footer .container .footer-links a{
+    padding: 10px 15px;
+    font-size: 1.5rem;
+  }
 }
